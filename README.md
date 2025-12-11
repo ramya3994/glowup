@@ -149,7 +149,7 @@ Frontend runs at http://localhost:5173
 
 📸 Screenshots
 
-(Add your screenshots here)
+![Dashboard](screenshots/dashboard.png)
 
 🛠 Future Enhancements
 
@@ -181,3 +181,4 @@ GlowUp demonstrates:
 ✔ Clean code + folder structure
 
 Perfect for resumes, GitHub portfolio, and job interviews.
+
