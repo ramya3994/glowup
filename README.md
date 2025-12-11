@@ -1,184 +1,207 @@
 🌟 GlowUp – Daily Small Wins Tracker
 
-GlowUp is a full-stack application that helps users track daily achievements, analyze mood patterns, and stay motivated.
-Built with Spring Boot, MySQL, React.js, Vite, Chart.js, and Docker.
+A full-stack productivity application that helps users track small daily achievements, understand mood patterns, and stay motivated.
+Built using Spring Boot, React + Vite, MySQL, Docker, Chart.js, and a clean modern UI.
 
-🧠 Why I Built GlowUp
+📌 Table of Contents
 
-To showcase complete full-stack development skills:
+✨ Overview
 
-REST API design (CRUD)
+🚀 Features
 
-Modern React UI with charts
+🧠 Tech Stack
 
-MySQL data modeling
+📊 Dashboard Preview
 
-Docker containerization
+🗄 API Endpoints
 
-Clean and professional GitHub project structure
+📦 Folder Structure
 
-🚀 Tech Stack
-Frontend
+🐳 Running with Docker
 
-React.js (Vite)
+▶️ Running Locally (Without Docker)
 
-Axios
+📸 Screenshots
 
-Chart.js
+🔮 Future Enhancements
 
-Custom CSS (responsive UI)
+📜 License
 
-Backend
+✨ Overview
 
-Java 17
+GlowUp helps users log their daily small wins, track progress over time, and visualize patterns through charts.
+The application is fully Dockerized with separate containers for:
 
-Spring Boot
+Backend (Spring Boot ✓)
 
-Spring Data JPA
+Frontend (React + Vite ✓)
 
-Hibernate ORM
+MySQL Database ✓
 
-Database
+🚀 Features
+🔹 Win Management (CRUD)
 
-MySQL
+Add win (task name, category, mood rating, notes)
 
-MySQL Workbench
+Edit win
 
-Tools
-
-IntelliJ
-
-VS Code
-
-Git & GitHub
-
-Docker Desktop
-
-✨ Features
-🔹 Daily Wins Management
-
-Add wins
-
-Edit wins
-
-Delete wins
+Delete win
 
 View all wins
 
 🔹 Smart Filters
 
-Filter by date
+Filter wins by date
 
-Filter by category
+Filter wins by category
 
 Clear filters
 
 🔹 Analytics Dashboard
 
-Pie Chart → Wins by Category
+Uses Chart.js to generate:
 
-Bar Chart → Mood Trend by Date
+🥧 Pie Chart: Wins by Category
 
-🔹 Modern UI
+📊 Bar Chart: Average Mood by Date
 
-Responsive layout
+🔹 Responsive UI
 
-Clean visuals
+Clean layout
+
+Mobile-friendly
 
 Smooth interactions
 
-🗂 Project Structure
+🧠 Tech Stack
+Frontend
+
+React.js
+
+Vite
+
+Chart.js
+
+Custom CSS
+
+Backend
+
+Java 17
+
+Spring Boot 3+
+
+Spring Data JPA
+
+MySQL Connector
+
+Hibernate ORM
+
+Database
+
+MySQL 8
+
+Tools
+
+IntelliJ IDEA
+
+VS Code
+
+Docker & Docker Compose
+
+📊 Dashboard Preview
+
+(Add your screenshot here)
+
+Example:
+/screenshots/dashboard.png
+
+🗄 API Endpoints
+Base URL:
+http://localhost:8082/api/wins
+
+GET – Fetch all wins
+GET /api/wins
+
+POST – Add a new win
+POST /api/wins
+
+PUT – Update win
+PUT /api/wins/{id}
+
+DELETE – Delete win
+DELETE /api/wins/{id}
+
+📦 Folder Structure
 glowup/
- ├── glowup-backend/
- │    ├── src/main/java/com/example/glowup_backend/
- │    ├── src/main/resources/application.properties
- │    ├── Dockerfile
- │
- ├── glowup-frontend/
- │    ├── src/
- │    ├── package.json
- │    ├── Dockerfile
- │
- ├── docker-compose.yml
- ├── README.md
+│── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── charts/
+│   └── ...
+│
+│── glowup-backend/
+│   ├── src/main/java/com/example/glowup
+│   ├── controller/
+│   ├── service/
+│   ├── repository/
+│   └── entity/
+│
+│── screenshots/
+│── docker-compose.yml
+│── README.md
 
-📡 Backend REST APIs
-
-✔ Base URL → http://localhost:8082/api/wins
-
-Method	Endpoint	Description
-GET	/api/wins	Fetch all wins
-POST	/api/wins	Add new win
-PUT	/api/wins/{id}	Update win
-DELETE	/api/wins/{id}	Delete win
 🐳 Running with Docker
-
-From project root folder:
-
-Start All Containers
+1️⃣ Build & Run all containers
 docker compose up --build
 
-Stop
+2️⃣ Access services
+
+🔹 Backend: http://localhost:8082/api/wins
+
+🔹 Frontend: http://localhost:5173/
+
+🔹 MySQL: localhost:3307
+
+3️⃣ Stop containers
 docker compose down
 
-Stop + Delete MySQL Data
-docker compose down -v
-
-
-✔ Frontend → http://localhost:5173
-
-✔ Backend → http://localhost:8082
-
-✔ MySQL → localhost:3306
-
-🔧 Run Without Docker
+▶️ Running Locally (Without Docker)
 Backend
 cd glowup-backend
 mvn spring-boot:run
 
-
-Backend runs at http://localhost:8082
-
 Frontend
-cd glowup-frontend
+cd frontend
 npm install
 npm run dev
 
-
-Frontend runs at http://localhost:5173
-
 📸 Screenshots
 
-![Dashboard](screenshots/dashboard.png)
+(Add all screenshots inside /screenshots/ folder)
 
-🛠 Future Enhancements
+Example:
 
-JWT authentication
+/screenshots/dashboard.png
 
-Weekly streaks
+🔮 Future Enhancements
 
-Export wins as PDF
+User authentication (JWT)
 
-Dark mode
+Dark mode UI
+
+Weekly/Monthly mood trend charts
+
+Export insights as PDF
+
+Streak tracking
 
 Mobile app version
 
-🏆 Badges
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Spring Boot](https://img.shields.io/badge/SpringBoot-4.0-green)
-![React](https://img.shields.io/badge/React-Vite-blue)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
-![Docker](https://img.shields.io/badge/Docker-Compose-blue)
+📜 License
 
-🎉 Final Notes
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
-GlowUp demonstrates:
+✅ Status: Production-Ready
 
-✔ Real full-stack experience
-✔ REST API design
-✔ Frontend charts + filters
-✔ Docker deployment
-✔ Clean code + folder structure
-
-Perfect for resumes, GitHub portfolio, and job interviews.
-
+This project is complete, fully functional, and deployable using Docker.
