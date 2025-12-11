@@ -1,154 +1,184 @@
-\# 🌟 GlowUp – Daily Small Wins Tracker  
+🌟 GlowUp – Daily Small Wins Tracker
 
-A full-stack application designed to help users track small daily achievements, reflect on progress, and stay motivated over time.
+GlowUp is a full-stack application that helps users track daily achievements, analyze mood patterns, and stay motivated.
+Built with Spring Boot, MySQL, React.js, Vite, Chart.js, and Docker.
 
+🧠 Why I Built GlowUp
 
+To showcase complete full-stack development skills:
 
-\## 🧠 Why I built this
+REST API design (CRUD)
 
-GlowUp was created to demonstrate full-stack development skills using \*\*Spring Boot, MySQL, React.js, Vite, and Chart.js\*\*, packaged into a clean and modern UI.  
+Modern React UI with charts
 
-This project also showcases API development, CRUD operations, filtering, chart visualizations, and GitHub project structuring.
+MySQL data modeling
 
+Docker containerization
 
+Clean and professional GitHub project structure
 
----
+🚀 Tech Stack
+Frontend
 
+React.js (Vite)
 
+Axios
 
-\## 🚀 Tech Stack Used
+Chart.js
 
+Custom CSS (responsive UI)
 
+Backend
 
-\### \*\*Frontend\*\*
+Java 17
 
-\- React.js  
+Spring Boot
 
-\- Vite  
+Spring Data JPA
 
-\- Chart.js (Pie + Bar charts)  
+Hibernate ORM
 
-\- Modern UI with custom CSS  
+Database
 
+MySQL
 
+MySQL Workbench
 
-\### \*\*Backend\*\*
+Tools
 
-\- Java  
+IntelliJ
 
-\- Spring Boot (REST API)  
+VS Code
 
-\- Spring Data JPA  
+Git & GitHub
 
-\- MySQL  
+Docker Desktop
 
+✨ Features
+🔹 Daily Wins Management
 
+Add wins
 
-\### \*\*Database\*\*
+Edit wins
 
-\- MySQL Workbench  
+Delete wins
 
-\- JPA/Hibernate ORM  
+View all wins
 
+🔹 Smart Filters
 
+Filter by date
 
-\### \*\*Tools\*\*
+Filter by category
 
-\- IntelliJ IDEA  
+Clear filters
 
-\- VS Code  
+🔹 Analytics Dashboard
 
-\- Git \& GitHub  
+Pie Chart → Wins by Category
 
+Bar Chart → Mood Trend by Date
 
+🔹 Modern UI
 
----
+Responsive layout
 
+Clean visuals
 
+Smooth interactions
 
-\## ✨ Features
+🗂 Project Structure
+glowup/
+ ├── glowup-backend/
+ │    ├── src/main/java/com/example/glowup_backend/
+ │    ├── src/main/resources/application.properties
+ │    ├── Dockerfile
+ │
+ ├── glowup-frontend/
+ │    ├── src/
+ │    ├── package.json
+ │    ├── Dockerfile
+ │
+ ├── docker-compose.yml
+ ├── README.md
 
+📡 Backend REST APIs
 
+✔ Base URL → http://localhost:8082/api/wins
 
-\### 🔹 CRUD Operations  
+Method	Endpoint	Description
+GET	/api/wins	Fetch all wins
+POST	/api/wins	Add new win
+PUT	/api/wins/{id}	Update win
+DELETE	/api/wins/{id}	Delete win
+🐳 Running with Docker
 
-\- Add, edit, delete daily wins  
+From project root folder:
 
-\- Store date, category, mood rating, and notes  
+Start All Containers
+docker compose up --build
 
+Stop
+docker compose down
 
+Stop + Delete MySQL Data
+docker compose down -v
 
-\### 🔹 Smart Filtering  
 
-\- Filter wins by \*\*date\*\*  
+✔ Frontend → http://localhost:5173
 
-\- Filter wins by \*\*category\*\*  
+✔ Backend → http://localhost:8082
 
-\- Clear filters instantly  
+✔ MySQL → localhost:3306
 
-
-
-\### 🔹 Analytics Dashboard  
-
-Includes 2 auto-updating charts:
-
-\- \*\*Pie Chart:\*\* Wins by Category  
-
-\- \*\*Bar Chart:\*\* Average Mood by Date  
-
-
-
-\### 🔹 Modern Responsive UI  
-
-\- Beautiful clean layout  
-
-\- Cards, shadows, gradients  
-
-\- Mobile responsive  
-
-
-
-\### 🔹 Backend REST APIs  
-
-\- `GET /api/wins` – Fetch all wins  
-
-\- `POST /api/wins` – Add new win  
-
-\- `PUT /api/wins/{id}` – Update win  
-
-\- `DELETE /api/wins/{id}` – Delete win  
-
-
-
----
-
-
-
-\## 📸 Screenshots
-
-
-
-\### 🖼 Dashboard with Wins + Filters + Charts  
-
-(Add your screenshots here after taking them)
-
-
-
----
-
-
-
-\## 🔧 How to Run the Project
-
-
-
-\### \*\*1️⃣ Start Backend (Spring Boot)\*\*  
-
-```bash
-
+🔧 Run Without Docker
+Backend
 cd glowup-backend
-
 mvn spring-boot:run
 
 
+Backend runs at http://localhost:8082
+
+Frontend
+cd glowup-frontend
+npm install
+npm run dev
+
+
+Frontend runs at http://localhost:5173
+
+📸 Screenshots
+
+![Dashboard](screenshots/dashboard.png)
+
+🛠 Future Enhancements
+
+JWT authentication
+
+Weekly streaks
+
+Export wins as PDF
+
+Dark mode
+
+Mobile app version
+
+🏆 Badges
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-4.0-green)
+![React](https://img.shields.io/badge/React-Vite-blue)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
+![Docker](https://img.shields.io/badge/Docker-Compose-blue)
+
+🎉 Final Notes
+
+GlowUp demonstrates:
+
+✔ Real full-stack experience
+✔ REST API design
+✔ Frontend charts + filters
+✔ Docker deployment
+✔ Clean code + folder structure
+
+Perfect for resumes, GitHub portfolio, and job interviews.
 
