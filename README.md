@@ -177,7 +177,7 @@ npm run dev
 
 📸 Screenshots
 
-(Add all screenshots inside /screenshots/ folder)
+![Dashboard](screenshots/dashboard.png)
 
 Example:
 
@@ -205,3 +205,4 @@ See the LICENSE file for details.
 ✅ Status: Production-Ready
 
 This project is complete, fully functional, and deployable using Docker.
+
