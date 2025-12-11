@@ -5,19 +5,17 @@ Built with Spring Boot, MySQL, React.js, Vite, Chart.js, and Docker.
 
 🧠 Why I Built GlowUp
 
-To showcase end-to-end full-stack development:
+To showcase complete full-stack development skills:
 
 REST API design (CRUD)
 
 Modern React UI with charts
 
-MySQL database modeling
+MySQL data modeling
 
 Docker containerization
 
-Clean GitHub project structure
-
-Perfect for Java Full-Stack Developer roles.
+Clean and professional GitHub project structure
 
 🚀 Tech Stack
 Frontend
@@ -28,7 +26,7 @@ Axios
 
 Chart.js
 
-Modern CSS
+Custom CSS (responsive UI)
 
 Backend
 
@@ -48,7 +46,7 @@ MySQL Workbench
 
 Tools
 
-IntelliJ IDEA
+IntelliJ
 
 VS Code
 
@@ -59,11 +57,11 @@ Docker Desktop
 ✨ Features
 🔹 Daily Wins Management
 
-Add a new win
+Add wins
 
-Edit win
+Edit wins
 
-Delete win
+Delete wins
 
 View all wins
 
@@ -73,21 +71,21 @@ Filter by date
 
 Filter by category
 
-Clear filters instantly
+Clear filters
 
 🔹 Analytics Dashboard
 
-Pie Chart: Wins by category
+Pie Chart → Wins by Category
 
-Bar Chart: Average mood by date
+Bar Chart → Mood Trend by Date
 
-🔹 Clean Modern UI
+🔹 Modern UI
 
-Fully responsive
+Responsive layout
 
-Beautiful visuals
+Clean visuals
 
-Smooth UX
+Smooth interactions
 
 🗂 Project Structure
 glowup/
@@ -104,32 +102,32 @@ glowup/
  ├── docker-compose.yml
  ├── README.md
 
-🧱 App Architecture
-  React (5173)
-        │
-        ▼
-Spring Boot API (8080)
-        │
-        ▼
-    MySQL DB (3306)
+📡 Backend REST APIs
 
-🐳 Run with Docker (Recommended)
+✔ Base URL → http://localhost:8082/api/wins
 
-From project root:
+Method	Endpoint	Description
+GET	/api/wins	Fetch all wins
+POST	/api/wins	Add new win
+PUT	/api/wins/{id}	Update win
+DELETE	/api/wins/{id}	Delete win
+🐳 Running with Docker
 
-Start All Services
+From project root folder:
+
+Start All Containers
 docker compose up --build
 
 Stop
 docker compose down
 
-Stop + Remove DB Data
+Stop + Delete MySQL Data
 docker compose down -v
 
 
 ✔ Frontend → http://localhost:5173
 
-✔ Backend → http://localhost:8080
+✔ Backend → http://localhost:8082
 
 ✔ MySQL → localhost:3306
 
@@ -138,32 +136,32 @@ Backend
 cd glowup-backend
 mvn spring-boot:run
 
+
+Backend runs at http://localhost:8082
+
 Frontend
 cd glowup-frontend
 npm install
 npm run dev
 
-📡 Backend REST APIs
-Method	Endpoint	Description
-GET	/api/wins	Get all wins
-POST	/api/wins	Add a new win
-PUT	/api/wins/{id}	Update a win
-DELETE	/api/wins/{id}	Delete a win
+
+Frontend runs at http://localhost:5173
+
 📸 Screenshots
 
-(Add screenshots here)
+(Add your screenshots here)
 
 🛠 Future Enhancements
 
-Login + JWT Authentication
+JWT authentication
 
-Weekly streak tracker
+Weekly streaks
 
-Export data to PDF
-
-Google login
+Export wins as PDF
 
 Dark mode
+
+Mobile app version
 
 🏆 Badges
 ![Java](https://img.shields.io/badge/Java-17-blue)
@@ -172,14 +170,14 @@ Dark mode
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue)
 
-🎉 Conclusion
+🎉 Final Notes
 
-GlowUp is a modern, production-ready full-stack project showcasing:
+GlowUp demonstrates:
 
-✔ Spring Boot APIs
-✔ MySQL database
-✔ React dashboards
+✔ Real full-stack experience
+✔ REST API design
+✔ Frontend charts + filters
 ✔ Docker deployment
-✔ Clean UI + charts
+✔ Clean code + folder structure
 
-Perfect for portfolio, interviews, and resume.
+Perfect for resumes, GitHub portfolio, and job interviews.
