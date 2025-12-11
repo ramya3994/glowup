@@ -1,0 +1,18 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Backend build
+backend/target/
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
