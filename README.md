@@ -1,6 +1,6 @@
 🌟 GlowUp – Daily Small Wins Tracker
 
-A full-stack productivity application that helps users track small daily achievements, understand mood patterns, and stay motivated.
+A full-stack productivity application that helps users track small daily achievements, analyze mood patterns, and stay motivated over time.
 Built using Spring Boot, React + Vite, MySQL, Docker, Chart.js, and a clean modern UI.
 
 📌 Table of Contents
@@ -11,9 +11,11 @@ Built using Spring Boot, React + Vite, MySQL, Docker, Chart.js, and a clean mode
 
 🧠 Tech Stack
 
-📊 Dashboard Preview
+🔐 Authentication & Security
 
 🗄 API Endpoints
+
+🧪 API Testing (Postman)
 
 📦 Folder Structure
 
@@ -29,23 +31,24 @@ Built using Spring Boot, React + Vite, MySQL, Docker, Chart.js, and a clean mode
 
 ✨ Overview
 
-GlowUp helps users log their daily small wins, track progress over time, and visualize patterns through charts.
+GlowUp helps users log their daily small wins, track progress over time, and visualize emotional patterns using charts.
+
 The application is fully Dockerized with separate containers for:
 
-Backend (Spring Boot ✓)
+✅ Backend (Spring Boot)
 
-Frontend (React + Vite ✓)
+✅ Frontend (React + Vite)
 
-MySQL Database ✓
+✅ Database (MySQL)
 
 🚀 Features
 🔹 Win Management (CRUD)
 
-Add win (task name, category, mood rating, notes)
+Add daily wins (title, category, mood rating, notes)
 
-Edit win
+Edit existing wins
 
-Delete win
+Delete wins
 
 View all wins
 
@@ -55,19 +58,19 @@ Filter wins by date
 
 Filter wins by category
 
-Clear filters
+Clear filters instantly
 
 🔹 Analytics Dashboard
 
 Uses Chart.js to generate:
 
-🥧 Pie Chart: Wins by Category
+🥧 Pie Chart – Wins by Category
 
-📊 Bar Chart: Average Mood by Date
+📊 Bar Chart – Average Mood by Date
 
 🔹 Responsive UI
 
-Clean layout
+Clean modern layout
 
 Mobile-friendly
 
@@ -92,7 +95,9 @@ Spring Boot 3+
 
 Spring Data JPA
 
-MySQL Connector
+Spring Security
+
+JWT Authentication
 
 Hibernate ORM
 
@@ -108,28 +113,63 @@ VS Code
 
 Docker & Docker Compose
 
-📊 Dashboard Preview
+Postman
 
-(Add your screenshot here)
+🔐 Authentication & Security
 
-Example:
-/screenshots/dashboard.png
+User registration & login using email and password
+
+Passwords securely stored using BCrypt hashing
+
+Stateless authentication using JWT (JSON Web Tokens)
+
+APIs secured using Spring Security
+
+Public access allowed only for:
+
+/api/auth/register
+
+/api/auth/login
+
+All other APIs require a valid JWT token
 
 🗄 API Endpoints
+🔐 Authentication APIs
+
 Base URL:
+
+http://localhost:8082/api/auth
+
+Method	Endpoint	Description
+POST	/register	Register new user
+POST	/login	Login user & get JWT
+🏆 Win APIs (Protected)
+
+Base URL:
+
 http://localhost:8082/api/wins
 
-GET – Fetch all wins
-GET /api/wins
+Method	Endpoint	Description
+GET	/api/wins	Fetch all wins
+POST	/api/wins	Add a new win
+PUT	/api/wins/{id}	Update a win
+DELETE	/api/wins/{id}	Delete a win
 
-POST – Add a new win
-POST /api/wins
+🔒 Requires Authorization: Bearer <JWT_TOKEN>
 
-PUT – Update win
-PUT /api/wins/{id}
+🧪 API Testing (Postman)
 
-DELETE – Delete win
-DELETE /api/wins/{id}
+All backend APIs are tested using Postman
+
+Authentication flow tested:
+
+Register user
+
+Login user
+
+Access protected endpoints using JWT
+
+Postman screenshots are available in the /screenshots folder
 
 📦 Folder Structure
 glowup/
@@ -140,29 +180,38 @@ glowup/
 │   └── ...
 │
 │── glowup-backend/
-│   ├── src/main/java/com/example/glowup
-│   ├── controller/
-│   ├── service/
-│   ├── repository/
-│   └── entity/
+│   ├── src/main/java/com/example/glowup_backend
+│   │   ├── controller/
+│   │   ├── service/
+│   │   ├── repository/
+│   │   ├── model/
+│   │   ├── security/
+│   │   └── config/
 │
 │── screenshots/
 │── docker-compose.yml
 │── README.md
+│── LICENSE
 
-🐳 Running with Docker
-1️⃣ Build & Run all containers
+🐳 Running with Docker (Recommended)
+Prerequisites
+
+Docker Desktop installed
+
+Steps
+git clone https://github.com/ramya3994/glowup.git
+cd glowup
 docker compose up --build
 
-2️⃣ Access services
+Access URLs
 
-🔹 Backend: http://localhost:8082/api/wins
+🔹 Frontend: http://localhost:5173
 
-🔹 Frontend: http://localhost:5173/
+🔹 Backend: http://localhost:8082
 
 🔹 MySQL: localhost:3307
 
-3️⃣ Stop containers
+Stop Containers
 docker compose down
 
 ▶️ Running Locally (Without Docker)
@@ -176,20 +225,16 @@ npm install
 npm run dev
 
 📸 Screenshots
-
 ![Dashboard](screenshots/dashboard.png)
-
-Example:
-
-/screenshots/dashboard.png
+![Postman JWT Test](screenshots/postman-jwt-test.png)
 
 🔮 Future Enhancements
 
-User authentication (JWT)
+Role-based authorization (Admin/User)
 
 Dark mode UI
 
-Weekly/Monthly mood trend charts
+Weekly / Monthly mood analytics
 
 Export insights as PDF
 
@@ -202,7 +247,10 @@ Mobile app version
 This project is licensed under the MIT License.
 See the LICENSE file for details.
 
-✅ Status: Production-Ready
+✅ Status
 
-This project is complete, fully functional, and deployable using Docker.
-
+Production-Ready
+✔ Secure
+✔ Dockerized
+✔ Interview-Ready
+✔ Clean Architecture
